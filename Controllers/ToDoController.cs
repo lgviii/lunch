@@ -1,20 +1,29 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
+﻿using Microsoft.AspNetCore.Mvc;
+using Lunch.Services;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
 using Lunch.Models;
 
 namespace Lunch.Controllers
 {
     public class ToDoController : Controller
     {
-        public IActionResult Index()
+        private readonly ITodoItemsService _todoItemsService;
+
+        public ToDoController(ITodoItemsService todoItemsService)
         {
-            // get todo items from the database
-            // put items into a model
-            // render view using the model
+            _todoItemsService = todoItemsService;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            var items = await _todoItemsService.GetIncompleteItemAsync();
+
+            var model = new ToDoViewModel()
+            {
+                Items = items
+            };
+
+            return View(model);
         }
     }
 }
