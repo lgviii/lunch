@@ -6,8 +6,8 @@ C:\dev\cs\Lunch\bin\Debug\netcoreapp2.0\Lunch.dll
 C:\dev\cs\Lunch\bin\Debug\netcoreapp2.0\Lunch.pdb
 C:\dev\cs\Lunch\obj\Debug\netcoreapp2.0\Lunch.csprojAssemblyReference.cache
 C:\dev\cs\Lunch\obj\Debug\netcoreapp2.0\Lunch.csproj.CoreCompileInputs.cache
-C:\dev\cs\Lunch\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs
 C:\dev\cs\Lunch\obj\Debug\netcoreapp2.0\Lunch.AssemblyInfoInputs.cache
 C:\dev\cs\Lunch\obj\Debug\netcoreapp2.0\Lunch.AssemblyInfo.cs
 C:\dev\cs\Lunch\obj\Debug\netcoreapp2.0\Lunch.dll
 C:\dev\cs\Lunch\obj\Debug\netcoreapp2.0\Lunch.pdb
+C:\dev\cs\Lunch\obj\Debug\netcoreapp2.0\UserSecretsAssemblyInfo.cs

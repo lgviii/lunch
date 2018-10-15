@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Lunch.Data;
 using Lunch.Models;
 using Lunch.Services;
+using Lunch.Mongo;
 
 namespace Lunch
 {
@@ -22,8 +23,10 @@ namespace Lunch
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-
-            services.AddSingleton<ITodoItemsService, FakeTodoItemsService>();
+            services.AddScoped<ITodoItemsService, TodoItemsService>();
+            services.AddTransient<IToDoContext, ToDoContext>();
+            services.AddTransient<IEmailSender, EmailSender>();
+            services.AddScoped<IToDoRepository, ToDoRepository>();
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
@@ -33,9 +36,18 @@ namespace Lunch
                 .AddDefaultTokenProviders();
 
             // Add application services.
-            services.AddTransient<IEmailSender, EmailSender>();
+            
 
             services.AddMvc();
+
+            services.Configure<MongoSettings>(
+                options =>
+                {
+                    options.ConnectionString = Configuration.GetSection("MongoDb:ConnectionString").Value;
+                    options.Database = Configuration.GetSection("MongoDb:Database").Value;
+                });
+
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -5,6 +5,7 @@ namespace Lunch.Services
 {
     public interface ITodoItemsService
     {
-        Task<ToDoItem[]> GetIncompleteItemAsync();
+        Task<ToDoItem[]> GetIncompleteItemsAsync();
+        Task GenerateFakeData();
     }
 }

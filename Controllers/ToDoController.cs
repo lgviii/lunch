@@ -16,7 +16,7 @@ namespace Lunch.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var items = await _todoItemsService.GetIncompleteItemAsync();
+            var items = await _todoItemsService.GetIncompleteItemsAsync();
 
             var model = new ToDoViewModel()
             {
@@ -25,5 +25,13 @@ namespace Lunch.Controllers
 
             return View(model);
         }
+
+        public async Task<IActionResult> AddFakeData()
+        {
+            await _todoItemsService.GenerateFakeData();
+
+            return Ok();
+        }
+               
     }
 }
