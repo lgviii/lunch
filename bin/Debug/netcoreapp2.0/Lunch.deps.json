@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "35251f8080cc600d0cefb52a9b7da0b21fa8fe5d"
+    "signature": "38b3b61d6107154b8c72079a5cb8d48d7bda6f89"
   },
   "compilationOptions": {
     "defines": [
@@ -23,18 +23,25 @@
     ".NETCoreApp,Version=v2.0": {
       "Lunch/1.0.0": {
         "dependencies": {
+          "Bootstrap.DateTimePicker": "0.0.11",
           "Humanizer": "2.5.1",
           "Microsoft.AspNetCore.All": "2.0.8",
           "Microsoft.EntityFrameworkCore.Tools": "2.0.3",
           "Microsoft.NETCore.App": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.4",
-          "MongoDB.Driver": "2.7.0"
+          "MongoDB.Driver": "2.7.0",
+          "jQuery.UI.Combined": "1.12.1"
         },
         "runtime": {
           "Lunch.dll": {}
         },
         "compile": {
           "Lunch.dll": {}
+        }
+      },
+      "Bootstrap.DateTimePicker/0.0.11": {
+        "dependencies": {
+          "Twitter.Bootstrap": "1.1.0"
         }
       },
       "DnsClient/1.0.7": {
@@ -513,6 +520,12 @@
           "lib/netstandard2.0/zh-Hant/Humanizer.resources.dll": {
             "locale": "zh-Hant"
           }
+        }
+      },
+      "jQuery/1.12.4": {},
+      "jQuery.UI.Combined/1.12.1": {
+        "dependencies": {
+          "jQuery": "1.12.4"
         }
       },
       "Libuv/1.10.0": {
@@ -4711,6 +4724,7 @@
           "System.Xml.XPath": "4.3.0"
         }
       },
+      "Twitter.Bootstrap/1.1.0": {},
       "WindowsAzure.Storage/8.1.4": {
         "dependencies": {
           "Microsoft.Data.OData": "5.8.2",
@@ -4908,6 +4922,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Bootstrap.DateTimePicker/0.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1oWbGKKLkBBcX5vTeCrwDrACEeKVPg9wRQn08mc06ydRimQfftmo1To53/PaCABkfDTCKPvO9isvTlg4MxFHfg==",
+      "path": "bootstrap.datetimepicker/0.0.11",
+      "hashPath": "bootstrap.datetimepicker.0.0.11.nupkg.sha512"
     },
     "DnsClient/1.0.7": {
       "type": "package",
@@ -5209,6 +5230,20 @@
       "sha512": "sha512-Msxxor/sdbCd3hDamdOP70qCkjhXwM2tIkRyAQR8jvrYVAg6fdN88FeJgCHm+Yss3vG759bakkik9xAjy50lvQ==",
       "path": "humanizer.core.zh-hant/2.5.1",
       "hashPath": "humanizer.core.zh-hant.2.5.1.nupkg.sha512"
+    },
+    "jQuery/1.12.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CO1X/gvl2I8TPiXywIzFCWP67aKZ3fi6emVDPoHsEKBQaRiDCIryIbg2VtoVfqvfOxb/dTLdcJHs8cTsH7/uMA==",
+      "path": "jquery/1.12.4",
+      "hashPath": "jquery.1.12.4.nupkg.sha512"
+    },
+    "jQuery.UI.Combined/1.12.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lm5zM0cuosG5U795wjKW30S5W3h43OCjwIHzDc39xP96An/Ngm4DAHyFcdNZ3Bp6O5+4rxphoxbts4DMXm4P1Q==",
+      "path": "jquery.ui.combined/1.12.1",
+      "hashPath": "jquery.ui.combined.1.12.1.nupkg.sha512"
     },
     "Libuv/1.10.0": {
       "type": "package",
@@ -7386,6 +7421,13 @@
       "sha512": "sha512-jw9oHHEIVW53mHY9PgrQa98Xo2IZ0ZjrpdOTmtvk+Rvg4tq7dydmxdNqUvJ5YwjDqhn75mBXWttWjiKhWP53LQ==",
       "path": "system.xml.xpath.xdocument/4.3.0",
       "hashPath": "system.xml.xpath.xdocument.4.3.0.nupkg.sha512"
+    },
+    "Twitter.Bootstrap/1.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2/yYBxQ+WOpjV1ZF7ZT0ABw34yHmqxaA4F7VL+wTHOgrdJZrJvbOLYqs9lZO8VUcBXkDws0rLS5z72zbPD/1Cw==",
+      "path": "twitter.bootstrap/1.1.0",
+      "hashPath": "twitter.bootstrap.1.1.0.nupkg.sha512"
     },
     "WindowsAzure.Storage/8.1.4": {
       "type": "package",

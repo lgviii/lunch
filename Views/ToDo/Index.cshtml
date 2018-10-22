@@ -17,18 +17,22 @@
         </thead>
         @foreach (var item in Model.Items)
         {
-        <tr>
-            <td>
-                <input type="checkbox" class="done-checkbox" />
-            </td>
-            <td>@item.Title</td>
-            <td>@item.DueAt.Humanize()</td>
-        </tr>
+            <tr>
+                <td>
+                    <form asp-action="MarkDone" method="post">
+                        <input type="checkbox" class="done-checkbox" asp-for="@item.IdDone"/>
+                        <input type="hidden" name="id" value="@item.Id" />
+                    </form>
+                </td>
+                <td>@item.Title</td>
+                <td>@item.DueAt.Humanize()</td>
+            </tr>
 
         }
     </table>
     <div class="panel-footer add-item-form">
-        <!-- ToDo: Add item form -->
+        @await Html.PartialAsync("AddItemPartial", new ToDoItem())
+
     </div>
 </div>
 

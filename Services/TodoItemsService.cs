@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using Lunch.Data;
 using Lunch.Models;
@@ -9,13 +10,10 @@ namespace Lunch.Services
     public class TodoItemsService : ITodoItemsService
     {
 
-        private readonly ApplicationDbContext _context;
-
         private readonly IToDoRepository _toDoRepo;
 
-        public TodoItemsService(ApplicationDbContext context, IToDoRepository toDoRep)
+        public TodoItemsService(IToDoRepository toDoRep)
         {
-            _context = context;
             _toDoRepo = toDoRep;
         }
 
@@ -26,28 +24,44 @@ namespace Lunch.Services
             return result.ToArray();
         }
 
-        public async Task GenerateFakeData()
+        public async Task AddItem(ToDoItem toDoItem)
         {
-            var item1 = new ToDoItem
-            {
-                Id = new System.Guid(),
-                DueAt = new System.DateTimeOffset(),
-                Title = "item 1",
-                IdDone = false
-            };
+            await _toDoRepo.AddToDoItems(toDoItem);
+        }
 
-            var item2 = new ToDoItem
-            {
-                Id = new System.Guid(),
-                DueAt = new System.DateTimeOffset(),
-                Title = "item 2",
-                IdDone = true
-            };
+        //public async Task GenerateFakeData()
+        //{
+        //    var item1 = new ToDoItem
+        //    {
+        //        Id = new System.Guid(),
+        //        DueAt = new System.DateTimeOffset(),
+        //        Title = "item 1",
+        //        IdDone = false
+        //    };
 
-            await _toDoRepo.AddToDoItems(item1);
-            await _toDoRepo.AddToDoItems(item2);
+        //    var item2 = new ToDoItem
+        //    {
+        //        Id = new System.Guid(),
+        //        DueAt = new System.DateTimeOffset(),
+        //        Title = "item 2",
+        //        IdDone = true
+        //    };
 
-            //await _context.Items.Where(a => a.IdDone == false).ToArrayAsync();
+        //    await _toDoRepo.AddToDoItems(item1);
+        //    await _toDoRepo.AddToDoItems(item2);
+
+        //    //await _context.Items.Where(a => a.IdDone == false).ToArrayAsync();
+        //}
+
+        public async Task MarkDoneAsync(string id)
+        {
+            var item = await _toDoRepo.GetToDoItem(id);
+
+            if (item == null) return;
+
+            item.IdDone = !item.IdDone;
+
+            await _toDoRepo.UpdateToDoItem(item);
         }
     }
 }

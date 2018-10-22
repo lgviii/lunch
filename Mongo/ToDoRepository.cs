@@ -19,8 +19,19 @@ namespace Lunch.Models
             await _context.ToDoItems().InsertOneAsync(toDoItem);
         }
 
+        public async Task<ToDoItem> GetToDoItem(string id)
+        {
+            return (await _context.ToDoItems().FindAsync(a => a.Id == id)).FirstOrDefault();
+        }
+
         public async Task<IEnumerable<ToDoItem>> ListToDoItems() {
             return (await _context.ToDoItems().FindAsync(a => true)).ToList();
+        }
+
+        public async Task UpdateToDoItem(ToDoItem toDoItem)
+        {
+            var filter = Builders<ToDoItem>.Filter.Where(a => a.Id == toDoItem.Id);
+            await _context.ToDoItems().ReplaceOneAsync(filter, toDoItem);
         }
     }
 }

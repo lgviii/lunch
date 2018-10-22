@@ -2,6 +2,12 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "Bootstrap.DateTimePicker/0.0.11": {
+        "type": "package",
+        "dependencies": {
+          "Twitter.Bootstrap": "(, )"
+        }
+      },
       "DnsClient/1.0.7": {
         "type": "package",
         "dependencies": {
@@ -521,6 +527,15 @@
           "lib/netstandard2.0/zh-Hant/Humanizer.resources.dll": {
             "locale": "zh-Hant"
           }
+        }
+      },
+      "jQuery/1.12.4": {
+        "type": "package"
+      },
+      "jQuery.UI.Combined/1.12.1": {
+        "type": "package",
+        "dependencies": {
+          "jQuery": "1.12.4"
         }
       },
       "Libuv/1.10.0": {
@@ -5749,6 +5764,9 @@
           "lib/netstandard1.3/System.Xml.XPath.XDocument.dll": {}
         }
       },
+      "Twitter.Bootstrap/1.1.0": {
+        "type": "package"
+      },
       "WindowsAzure.Storage/8.1.4": {
         "type": "package",
         "dependencies": {
@@ -5767,6 +5785,17 @@
     }
   },
   "libraries": {
+    "Bootstrap.DateTimePicker/0.0.11": {
+      "sha512": "1oWbGKKLkBBcX5vTeCrwDrACEeKVPg9wRQn08mc06ydRimQfftmo1To53/PaCABkfDTCKPvO9isvTlg4MxFHfg==",
+      "type": "package",
+      "path": "bootstrap.datetimepicker/0.0.11",
+      "files": [
+        "Content/Content/bootstrap-datetimepicker.min.css",
+        "Content/Scripts/bootstrap-datetimepicker.min.js",
+        "bootstrap.datetimepicker.0.0.11.nupkg.sha512",
+        "bootstrap.datetimepicker.nuspec"
+      ]
+    },
     "DnsClient/1.0.7": {
       "sha512": "f3k5ufhUSL658fy/ac1mReqRIr0jGMyOJFvBqJ+7cASq01NIysYbrrRDjboYKAGrd0Y2mc1A749uQvT8vAA91A==",
       "type": "package",
@@ -6282,6 +6311,80 @@
         "humanizer.core.zh-hant.nuspec",
         "lib/netstandard1.0/zh-Hant/Humanizer.resources.dll",
         "lib/netstandard2.0/zh-Hant/Humanizer.resources.dll"
+      ]
+    },
+    "jQuery/1.12.4": {
+      "sha512": "CO1X/gvl2I8TPiXywIzFCWP67aKZ3fi6emVDPoHsEKBQaRiDCIryIbg2VtoVfqvfOxb/dTLdcJHs8cTsH7/uMA==",
+      "type": "package",
+      "path": "jquery/1.12.4",
+      "files": [
+        ".signature.p7s",
+        "Content/Scripts/jquery-1.12.4-vsdoc.js",
+        "Content/Scripts/jquery-1.12.4.js",
+        "Content/Scripts/jquery-1.12.4.min.js",
+        "Content/Scripts/jquery-1.12.4.min.map",
+        "Tools/common.ps1",
+        "Tools/install.ps1",
+        "Tools/jquery-1.12.4.intellisense.js",
+        "Tools/uninstall.ps1",
+        "jquery.1.12.4.nupkg.sha512",
+        "jquery.nuspec"
+      ]
+    },
+    "jQuery.UI.Combined/1.12.1": {
+      "sha512": "lm5zM0cuosG5U795wjKW30S5W3h43OCjwIHzDc39xP96An/Ngm4DAHyFcdNZ3Bp6O5+4rxphoxbts4DMXm4P1Q==",
+      "type": "package",
+      "path": "jquery.ui.combined/1.12.1",
+      "files": [
+        ".signature.p7s",
+        "Content/Content/themes/base/accordion.css",
+        "Content/Content/themes/base/all.css",
+        "Content/Content/themes/base/autocomplete.css",
+        "Content/Content/themes/base/base.css",
+        "Content/Content/themes/base/button.css",
+        "Content/Content/themes/base/core.css",
+        "Content/Content/themes/base/datepicker.css",
+        "Content/Content/themes/base/dialog.css",
+        "Content/Content/themes/base/draggable.css",
+        "Content/Content/themes/base/images/ui-bg_flat_0_aaaaaa_40x100.png",
+        "Content/Content/themes/base/images/ui-bg_flat_75_ffffff_40x100.png",
+        "Content/Content/themes/base/images/ui-bg_glass_55_fbf9ee_1x400.png",
+        "Content/Content/themes/base/images/ui-bg_glass_65_ffffff_1x400.png",
+        "Content/Content/themes/base/images/ui-bg_glass_75_dadada_1x400.png",
+        "Content/Content/themes/base/images/ui-bg_glass_75_e6e6e6_1x400.png",
+        "Content/Content/themes/base/images/ui-bg_glass_95_fef1ec_1x400.png",
+        "Content/Content/themes/base/images/ui-bg_highlight-soft_75_cccccc_1x100.png",
+        "Content/Content/themes/base/images/ui-icons_222222_256x240.png",
+        "Content/Content/themes/base/images/ui-icons_2e83ff_256x240.png",
+        "Content/Content/themes/base/images/ui-icons_444444_256x240.png",
+        "Content/Content/themes/base/images/ui-icons_454545_256x240.png",
+        "Content/Content/themes/base/images/ui-icons_555555_256x240.png",
+        "Content/Content/themes/base/images/ui-icons_777620_256x240.png",
+        "Content/Content/themes/base/images/ui-icons_777777_256x240.png",
+        "Content/Content/themes/base/images/ui-icons_888888_256x240.png",
+        "Content/Content/themes/base/images/ui-icons_cc0000_256x240.png",
+        "Content/Content/themes/base/images/ui-icons_cd0a0a_256x240.png",
+        "Content/Content/themes/base/images/ui-icons_ffffff_256x240.png",
+        "Content/Content/themes/base/jquery-ui.css",
+        "Content/Content/themes/base/jquery-ui.min.css",
+        "Content/Content/themes/base/menu.css",
+        "Content/Content/themes/base/progressbar.css",
+        "Content/Content/themes/base/resizable.css",
+        "Content/Content/themes/base/selectable.css",
+        "Content/Content/themes/base/selectmenu.css",
+        "Content/Content/themes/base/slider.css",
+        "Content/Content/themes/base/sortable.css",
+        "Content/Content/themes/base/spinner.css",
+        "Content/Content/themes/base/tabs.css",
+        "Content/Content/themes/base/theme.css",
+        "Content/Content/themes/base/tooltip.css",
+        "Content/Scripts/jquery-ui-1.12.1.js",
+        "Content/Scripts/jquery-ui-1.12.1.min.js",
+        "Tools/common.ps1",
+        "Tools/install.ps1",
+        "Tools/uninstall.ps1",
+        "jquery.ui.combined.1.12.1.nupkg.sha512",
+        "jquery.ui.combined.nuspec"
       ]
     },
     "Libuv/1.10.0": {
@@ -14756,6 +14859,18 @@
         "system.xml.xpath.xdocument.nuspec"
       ]
     },
+    "Twitter.Bootstrap/1.1.0": {
+      "sha512": "2/yYBxQ+WOpjV1ZF7ZT0ABw34yHmqxaA4F7VL+wTHOgrdJZrJvbOLYqs9lZO8VUcBXkDws0rLS5z72zbPD/1Cw==",
+      "type": "package",
+      "path": "twitter.bootstrap/1.1.0",
+      "files": [
+        ".signature.p7s",
+        "content/Content/bootstrap-1.1.0.css",
+        "content/Content/bootstrap-1.1.0.min.css",
+        "twitter.bootstrap.1.1.0.nupkg.sha512",
+        "twitter.bootstrap.nuspec"
+      ]
+    },
     "WindowsAzure.Storage/8.1.4": {
       "sha512": "W6ZZ0/o7+3Qb77mRAQyLjPudHG3OMeeQ4p9yY13PUdJArmRCx2cLMm5F4tpIjJXxzHC0ew0oK7DMDGILMdfCnw==",
       "type": "package",
@@ -14781,12 +14896,14 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "Bootstrap.DateTimePicker >= 0.0.11",
       "Humanizer >= 2.5.1",
       "Microsoft.AspNetCore.All >= 2.0.8",
       "Microsoft.EntityFrameworkCore.Tools >= 2.0.3",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.4",
-      "MongoDB.Driver >= 2.7.0"
+      "MongoDB.Driver >= 2.7.0",
+      "jQuery.UI.Combined >= 1.12.1"
     ]
   },
   "packageFolders": {
@@ -14830,6 +14947,10 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "Bootstrap.DateTimePicker": {
+            "target": "Package",
+            "version": "[0.0.11, )"
+          },
           "Humanizer": {
             "target": "Package",
             "version": "[2.5.1, )"
@@ -14856,6 +14977,10 @@
           "MongoDB.Driver": {
             "target": "Package",
             "version": "[2.7.0, )"
+          },
+          "jQuery.UI.Combined": {
+            "target": "Package",
+            "version": "[1.12.1, )"
           }
         },
         "imports": [
@@ -14865,5 +14990,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Bootstrap.DateTimePicker 0.0.11 does not provide an inclusive lower bound for dependency Twitter.Bootstrap. An approximate best match of Twitter.Bootstrap 1.1.0 was resolved.",
+      "libraryId": "Twitter.Bootstrap",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    }
+  ]
 }
